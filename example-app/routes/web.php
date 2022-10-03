@@ -20,4 +20,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/champions', [App\Http\Controllers\ChampionController::class, 'index'])->name('champions');
+## View
+Route::get('/champions', [App\Http\Controllers\ChampionsController::class, 'index'])->name('champions');
+
+## Create
+Route::get('/champions/create', [App\Http\Controllers\ChampionsController::class, 'create'])->name('champions.create');
+Route::post('/champions/store', [App\Http\Controllers\ChampionsController::class, 'store'])->name('champions.store');
+
+## Update
+Route::get('/champions/store/{id}', [App\Http\Controllers\ChampionsController::class, 'edit'])->name('champions.edit');
+Route::post('/champions/update/{id}', [App\Http\Controllers\ChampionsController::class, 'update'])->name('champions.update');
+
+## Delete
+Route::get('/champions/delete/{id}', [App\Http\Controllers\ChampionsController::class, 'destroy'])->name('champions.delete');

@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                        <a href="{{ route('champions') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Go to user list!</a>
                 </div>
 
             </div>

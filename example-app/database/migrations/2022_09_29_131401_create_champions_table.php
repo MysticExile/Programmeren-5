@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('champions.blade.php', function (Blueprint $table) {
+        Schema::create('champions', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->float('prize');
+            $table->text('prize');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('champions.blade.php');
+        Schema::dropIfExists('champions');
     }
 };
